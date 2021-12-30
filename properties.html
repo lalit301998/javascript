@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<title>private methods and properties</title>
+</head>
+<body>
+    <script>
+        function PetrolPump(petrol_litre)
+        {
+            //private var
+            petrol_price_per_litre = 50;
+            totalprice = function()
+            {
+                return petrol_price_per_litre *petrol_litre;
+
+
+            };
+            this.fill=function()
+            {
+                this.price= totalprice;
+                return 'this vlaue'+this.price;
+            }
+        }
+        var car = new PetrolPump(5);
+        console.log(car.fill());
+    </script>
+
+</body>
+
+</html>
